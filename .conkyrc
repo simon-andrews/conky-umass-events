@@ -1,0 +1,19 @@
+conky.config = {
+  alignment = 'top_left',
+  double_buffer = true,
+  draw_shades = false,
+  font = 'Lato:size=10',
+  gap_x = 10,
+  gap_y = 10,
+  use_xft = true,
+}
+
+conky.text = [[
+${color white}Today @ UMass Amherst
+${color red}${hr}
+${color white}${execi 3600 ~/.config/conky/um_events.py}
+
+${color white}CICS Events
+${color red}${hr}
+${color white}${execi 3600 ~/.config/conky/cics_events.py}
+]]
